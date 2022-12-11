@@ -1,0 +1,1 @@
+from stock_info_easy import stock_info_easy
