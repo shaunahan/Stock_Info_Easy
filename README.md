@@ -39,7 +39,7 @@ In the terminal, type:
 
 #### 2. Visualization of Daily Return
 <p align="center">
-<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/daily_return.png" style="zoom:20%;" />
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/daily_return.png" style="zoom:-20%;" />
 </p>
 
 #### 3. Audio file on Stock Info
