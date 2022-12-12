@@ -39,20 +39,21 @@ In the terminal, type:
 
 #### 2. Visualization of Daily Return
 <p align="center">
-<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/daily_return.png" style="zoom:50%;" />
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/daily_return.png" style="zoom:20%;" />
 </p>
-<br>
 
 #### 3. Audio file on Stock Info
 This package provides key stock information such as PE ratio and basic company information of all queries companies in an audio format. 
 ```python
 % stock_info_easy.py --audio_filename hello.mp3
 ```
+<br>
 
 #### 4. Prediction on Closing Price
 This package uses the time series LSTM vanila model to predict the closing price. 
 LSTM model is built with two hidden LSTM layers followed by a standard feedforward output layer. 
-To disable the prediction function, set `--predict_future_price False`.
+To disable the prediction function, <br>
+set `--predict_future_price False`.
 
 ```python
 # Example 1: Set `--predict_future_price False` to skip the stock forecasting step. 
