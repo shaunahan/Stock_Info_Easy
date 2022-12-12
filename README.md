@@ -1,12 +1,13 @@
 # Stock_Info_Easy
 
 This Python package is an implementation of the existing  __*yfinance wrapper*__, one of the  widely used yahoo finance API wrappers.
-One drawback of the existing yahoo finance API wrapper is its inability to fetch stock data using the company name; it can only fetch the data with company symbol registered on the Yahoo Finance. <br>
+One drawback of the existing yahoo finance API wrapper is its inability to fetch stock data using the company name; it can only fetch the data with company symbol registered on the Yahoo Finance. <br><br>
 To improve the functionality of the previous wrapper, this package enables a user to query a company with its full name.
 By simply typing a company name, this pacakage will generate today's stock information for the company of interest. 
 
 The fetched data includes: <br>
 * _company name, open, high, low, close (closing price), adj close, volume, daily return, and PE ratios._ <br>
+<br>
 The stock information will be provided in dynamic formats with the use of __visualizations, a data table, a stock forecast and an audio file__. 
 
 ## Installation
