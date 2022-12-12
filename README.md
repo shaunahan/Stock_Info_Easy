@@ -8,7 +8,7 @@ By simply typing a company name, this pacakage will generate today's stock infor
 The fetched data includes: <br>
 * _company name, open, high, low, close (closing price), adj close, volume, daily return, and PE ratios._ <br>
 <br>
-The stock information will be provided in dynamic formats with the use of __visualizations, a data table, a stock forecast and an audio file__  
+The stock information will be provided in dynamic formats with the use of visualizations, a data table, a stock forecast and an audio file.
 
 ## Installation
 
