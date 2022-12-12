@@ -367,7 +367,6 @@ def create_pricelist(close_prices, windown_size = 30):
         normal_data.append(window_list)
 
     result_list = np.array(normal_data)
-    print('result_list', result_list)    
     return result_list
 
 
@@ -430,7 +429,6 @@ def predict_rolling_price(result_list, model, window_size = 30, predict_window_s
         result_list[:-1,:] = result_list[1:,:] 
         result_list[-1, :-1] = result_list[-1,1:]
         result_list[-1,-1] = pred
-        print('pred_list', pred_list)
     return pred_list
 
 
@@ -576,7 +574,7 @@ if __name__ == "__main__":
     print("Company Name: ", comp_names_abbr)
     #print(data_list.groupby('company_fullname').head(1))
     print(data_list.groupby('company_fullname').tail(1))
-    print(data_list)
+    print(company_list)
     get_closing_price_viz(company_list, comp_names)
     get_daily_return_viz(company_list, comp_names)
     predict_future_price(data_list,  windown_size=args.window_size, 
