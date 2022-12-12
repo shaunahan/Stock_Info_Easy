@@ -6,7 +6,7 @@ To improve the functionality of the previous wrapper, this package enables a use
 By simply typing a company name, this pacakage will generate today's stock information for the company of interest. 
 
 The fetched data includes: <br>
-<p align="center"> _company name, open, high, low, close (closing price), adj close, volume, daily return, and PE ratios._ <br>
+* *_company name, open, high, low, close (closing price), adj close, volume, daily return, and PE ratios._ <br>
 The stock information will be provided in dynamic formats with the use of __visualizations, a data table, a stock forecast and an audio file__. 
 
 ## Installation
