@@ -576,6 +576,7 @@ if __name__ == "__main__":
     print("Company Name: ", comp_names_abbr)
     #print(data_list.groupby('company_fullname').head(1))
     print(data_list.groupby('company_fullname').tail(1))
+    print(data_list)
     get_closing_price_viz(company_list, comp_names)
     get_daily_return_viz(company_list, comp_names)
     predict_future_price(data_list,  windown_size=args.window_size, 
