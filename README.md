@@ -72,13 +72,13 @@ On the terminal, type:
 ```
 #### 2. Visualization of Closing Price
 <p align="center">
-<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/closing_price.png" width="950" height="450"/>
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/closing_price.png" width="900" height="400"/>
 </p>
 <br>
 
 #### 3. Visualization of Daily Return
 <p align="center">
-<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/daily_return.png" width="700" height="400" />
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/daily_return.png" width="750" height="430" />
 </p>
 
 #### 4. Audio file on Stock Info
