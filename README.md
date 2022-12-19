@@ -21,21 +21,10 @@ $ pip install stock_info_easy
 To execute the package, __simply type the names of companies__. <br> 
 On the terminal, type:  
 ```python
-# Example 1: Only specify a company name(s) to query, using all other parameters as default.
-% stock_info_easy.py --comp_names amazon, apple, microsoft, google 
+# Example: Only specify a company name(s) to query, using all other parameters as default.
+>>> Input:
+% get_hist_data(['amazon', 'apple', 'microsoft', 'google'], start_date = 01/04/2022, end_date = '01/10/2022') # end_date is today's date by default.
 
-# Example 2: Specify a company name and a start date. 
-% stock_info_easy.py --comp_names amazon --start_date 11/11/2022  # end_date is today's date by default.
-
-# Example 3: Specify whether to include a closing price forecast or not.
-% stock_info_easy.py --comp_names amazon --start_date 11/11/2022  --end_date 12/12/2022 --predict_future_price True
-```
-## Output
-####
-
-```python
-# Input: 
-% python stock_info_easy.py --comp_names amazon apple google microsoft --start_date 2022-01-04 --end_date 2022-01-10
 >>> Output: 
 [                Open        High         Low       Close      Adj Close    Volume     company_name     company_fullname
     2022-01-04  170.438004  171.399994  166.349503  167.522003  167.522003  70726000       amazon           AMAZON
@@ -68,15 +57,21 @@ On the terminal, type:
     2022-01-07  314.149994  316.500000  310.089996  314.040009  311.124725  32720000    microsoft        MICROSOFT
     2022-01-10  309.489990  314.720001  304.690002  314.269989  311.352570  44289500    microsoft        MICROSOFT
     [5 rows x 8 columns]]
-
 ```
+
 #### 2. Visualization of Closing Price
+```python
+>>> Input: get_closing_price_viz(company_list, comp_names) # company_list and comp_names are output from the previous function.
+```
 <p align="center">
 <img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/closing_price.png" width="900" height="400"/>
 </p>
 <br>
 
 #### 3. Visualization of Daily Return
+```python
+>>> Input: get_daily_return_viz(company_list, company_names)
+```
 <p align="center">
 <img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/daily_return.png" width="750" height="430" />
 </p>
@@ -84,22 +79,19 @@ On the terminal, type:
 #### 4. Audio file on Stock Info
 This package provides key stock information such as PE ratio and basic company information of all queries companies in an audio format. 
 ```python
-% python stock_info_easy.py --audio_filename hello.mp3
+% generate_audio(comp_names_abbr, audio_filename='default1.mp3') # insert a filename in audio_filename
 ```
 <br>
 
 #### 5. Prediction on Closing Price
 This package uses the time series LSTM vanila model to predict the closing price. 
 LSTM model is built with two hidden LSTM layers followed by a standard feedforward output layer. 
-To disable the prediction function, <br>
-set `--predict_future_price False`.
 
 ```python
-# Example 1: Set `--predict_future_price False` to skip the stock forecasting step. 
-% python stock_info_easy.py --comp_names google --start_date 11/11/2022  --end_date 12/12/2022 --predict_future_price False
-
-# Example 2: A query made using all parameters.
-% python stock_info_easy.py --comp_names google --start_date 09/01/2022 -end_date 12/10/2022 --window_size 15 --prediction_window_size 3 --predict_future_price True --audio_filename hello.mp3
+# Write following functions 
+% create_pricelist(close_prices, windown_size = 30)
+% predict_rolling_price(result_list, model, window_size = 30, predict_window_size = 10)
+% train_model(stock, comp_name, windown_size=30, predict_window_size=10)
 ```
 <p align="center">
 <img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/closing_price_forecast.png", width="850" height="350" />
