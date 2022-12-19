@@ -117,6 +117,7 @@ def get_symbol(query):
     try:
         data = yq.search(query)
     except ValueError: 
+        print(query)
     else:
         quotes = data['quotes'] 
         if len(quotes) == 0:
