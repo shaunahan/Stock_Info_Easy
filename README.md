@@ -18,68 +18,55 @@ $ pip install stock_info_easy
 
 
 ## Usage
-To execute the package, __simply type the names of companies__. <br> 
-On the terminal, type:  
-```python
-# Example: Only specify a company name(s) to query, using all other parameters as default.
->>> Input:
-% get_hist_data(['amazon', 'apple', 'microsoft', 'google'], start_date = 01/04/2022, end_date = '01/10/2022') # end_date is today's date by default.
 
->>> Output: 
-[                Open        High         Low       Close      Adj Close    Volume     company_name     company_fullname
-    2022-01-04  170.438004  171.399994  166.349503  167.522003  167.522003  70726000       amazon           AMAZON
-    2022-01-05  166.882996  167.126495  164.356995  164.356995  164.356995  64302000       amazon           AMAZON
-    2022-01-06  163.450500  164.800003  161.936996  163.253998  163.253998  51958000       amazon           AMAZON
-    2022-01-07  163.839005  165.243500  162.031006  162.554001  162.554001  46606000       amazon           AMAZON
-    2022-01-10  160.585495  161.661499  156.304504  161.485992  161.485992  87798000       amazon           AMAZON
-    [5 rows x 8 columns],
-    
-    Open        High         Low       Close   Adj Close     Volume company_name company_fullname
-    2022-01-04  182.630005  182.940002  179.119995  179.699997  178.663086   99310400        apple            APPLE
-    2022-01-05  179.610001  180.169998  174.639999  174.919998  173.910645   94537600        apple            APPLE
-    2022-01-06  172.699997  175.300003  171.639999  172.000000  171.007523   96904000        apple            APPLE
-    2022-01-07  172.889999  174.139999  171.029999  172.169998  171.176529   86709100        apple            APPLE
-    2022-01-10  169.080002  172.500000  168.169998  172.190002  171.196426  106765600        apple            APPLE
-    [5 rows x 8 columns], 
-    
-    Open        High         Low       Close   Adj Close    Volume company_name company_fullname
-    2022-01-04  145.550507  146.610001  143.816147  144.416504  144.416504  22928000       google           GOOGLE
-    2022-01-05  144.181000  144.298004  137.523499  137.653503  137.653503  49642000       google           GOOGLE
-    2022-01-06  137.497498  139.686005  136.763504  137.550995  137.550995  29050000       google           GOOGLE
-    2022-01-07  137.904999  138.254745  135.789001  137.004501  137.004501  19408000       google           GOOGLE
-    2022-01-10  135.098999  138.639999  133.140503  138.574005  138.574005  34096000       google           GOOGLE
-    [5 rows x 8 columns],
-    
-    Open        High         Low       Close   Adj Close    Volume company_name company_fullname
-    2022-01-04  334.829987  335.200012  326.119995  329.010010  325.955750  32674300    microsoft        MICROSOFT
-    2022-01-05  325.859985  326.070007  315.980011  316.380005  313.442993  40054300    microsoft        MICROSOFT
-    2022-01-06  313.149994  318.700012  311.489990  313.880005  310.966187  39646100    microsoft        MICROSOFT
-    2022-01-07  314.149994  316.500000  310.089996  314.040009  311.124725  32720000    microsoft        MICROSOFT
-    2022-01-10  309.489990  314.720001  304.690002  314.269989  311.352570  44289500    microsoft        MICROSOFT
-    [5 rows x 8 columns]]
+```python
+# Insert the name(s) of company(ies) inside the `get_hist_data` function.  ex) ['amazon', 'apple', 'google', 'microsoft']
+>>> data_list, comp_names_abbr, company_list, comp_names = stock_info_easy.get_hist_data((['amazon', 'apple', 'google', 'microsoft']), start_date="01/04/2022", end_date = "2022-01-10") # if don't specify the `end_date`, today's date will be selected by default. 
+
+# To view the stock data as a table, type `data_list` to view all or by company `company_list[i]`, i = index of the company. 
+>>> company_list[1]  # stock info of all queried companies.
+<p align="center">
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/data_list.png" width="900" height="400"/>
+</p>
+<br>
+>>> company_list[0]  # first company (amazon) info.
+<p align="center">
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/company_list[0].png" width="900" height="400"/>
+</p>
+<br>
+>>> company_list[1]  # second company (apple) info.
+<p align="center">
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/company_list[1].png" width="900" height="400"/>
+</p>
+<br>
+
+
 ```
 
 #### 2. Visualization of Closing Price
 ```python
->>> Input: get_closing_price_viz(company_list, comp_names) # company_list and comp_names are output from the previous function.
+# To generate a visualization of closing price, copy-paste below function as it is.
+>>> get_closing_price_viz(company_list, comp_names) 
 ```
 <p align="center">
-<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/closing_price.png" width="900" height="400"/>
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/closing_price_.png" width="900" height="400"/>
 </p>
 <br>
 
 #### 3. Visualization of Daily Return
 ```python
->>> Input: get_daily_return_viz(company_list, company_names)
+# To generate a visualization of Daily Return, copy-paste below function as it is.
+>>> get_daily_return_viz(company_list, company_names)
 ```
 <p align="center">
-<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/daily_return.png" width="750" height="430" />
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/daily_return_.png" width="750" height="430" />
 </p>
 
 #### 4. Audio file on Stock Info
 This package provides key stock information such as PE ratio and basic company information of all queries companies in an audio format. 
+
 ```python
-% generate_audio(comp_names_abbr, audio_filename='default1.mp3') # insert a filename in audio_filename
+>>> generate_audio(comp_names_abbr, audio_filename='default1.mp3') # customize the audio filename; by default, the file will be saved as 'default1.mp3'.
 ```
 <br>
 
@@ -88,13 +75,17 @@ This package uses the time series LSTM vanila model to predict the closing price
 LSTM model is built with two hidden LSTM layers followed by a standard feedforward output layer. 
 
 ```python
-# Write following functions 
-% create_pricelist(close_prices, windown_size = 30)
-% predict_rolling_price(result_list, model, window_size = 30, predict_window_size = 10)
-% train_model(stock, comp_name, windown_size=30, predict_window_size=10)
+# Write following functions.
+# The window size and prediction window size can be customized; by default, they are set as 30 days and 10 days respectively. 
+
+>>> stock_info_easy.predict_future_price(data_list, comp_names_abbr, windown_size=30, predict_window_size=10, predict=True)
+
 ```
 <p align="center">
-<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/closing_price_forecast.png", width="850" height="350" />
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/predict_amazon.png", width="600" height="150" />
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/predict_apple.png", width="600" height="150" />
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/predict_google.png", width="600" height="150" />
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/predict_microsoft.png", width="600" height="150" />
 </p>
 <br>
 

@@ -277,11 +277,11 @@ def get_closing_price_viz(company_list, comp_names):
     Plots of closing prices for each input company.
     """   
 
+    
     plt.figure(figsize=(15, 6))
     plt.subplots_adjust(top=1.25, bottom=1.2)
 
     for i, company in enumerate(company_list, 1): 
-        print('company', company)
         plt.subplot(2, 2, i)
         company['Adj Close'].plot()
         plt.ylabel('Adj Close')
@@ -290,7 +290,7 @@ def get_closing_price_viz(company_list, comp_names):
     # generate subplots
     plt.tight_layout()
     plt.show()
-
+  
 
 def get_daily_return_viz(company_list, company_names):
     """
@@ -371,7 +371,7 @@ def create_pricelist(close_prices, windown_size = 30):
     return result_list
 
 
-def predict_future_price(data_list = None, windown_size=30, predict_window_size=10, predict=False):
+def predict_future_price(data_list, comp_names_abbr, windown_size=30, predict_window_size=10, predict=True):
     """
     Predict future price. 
 
