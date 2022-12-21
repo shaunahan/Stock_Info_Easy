@@ -7,7 +7,7 @@ Most of the times, the currently available Yahoo finance API wrappers take __com
 This often causes confusion as it is difficult to guess company symbols by heart. <br>
 (eg. what is the abbreviation form of the company _Apple, is it `APPL`? `AAPL`? or `APLE`?)_  
 
-Therefore, this package aims to provide an improved functionality of querying by making it possible for users to fetch stock data by __company name(s) alone!__. <br><br>
+Therefore, this package aims to provide an improved functionality of querying by making it possible for users to fetch stock data by __company name(s) alone!__ <br><br>
 Additionally, this package generates the stock data in dynamic formats, such as visualizations, data table, stock price forecast, and an audio file with daily prime stock price.
 <br>
 
