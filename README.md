@@ -26,11 +26,10 @@ $ pip install stock_info_easy
 ## Usage
 
 ### 1. Fetch Stock Data
-Insert the name of a company inside the `get_hist_data` function. <Br> 
-_ex) ['amazon', 'apple', 'google', 'microsoft']_
+Insert the name of a company inside the `get_hist_data` function. _ex) ['amazon', 'apple', 'google', 'microsoft']_
 ```python
 
-# By default, today's date will be used as end_date when the end_date is not specified. 
+# By default, today's date will be used as an end date when not specified. 
 
 >>> data_list, comp_names_abbr, company_list, comp_names = \
 stock_info_easy.get_hist_data((['amazon', 'apple', 'google', 'microsoft']), \
