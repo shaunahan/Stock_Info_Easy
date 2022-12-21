@@ -2,15 +2,17 @@
 
 This Python package is an implementation of the existing  _yfinance wrapper_, one of the  widely used yahoo finance API wrappers.<br>
 <br>
-Most of the times, the currently available finance API wrappers take company symbols as queries instead of company names. 
-This often causes confusion as it is difficult to guess company symbols (eg. what is the abbreviation of the company `Apple` - APPL? AAPL? or APLE?)  <br>
+Most of the times, the currently available Yahoo finance API wrappers take company symbols as input queries instead of company names. 
+This often causes confusion as it is difficult to guess company symbols by heart. <br>
+(eg. what is the abbreviation form of the company `Apple` - is it APPL? AAPL? or APLE?)  <br>
 <br>
-Therefore, this package hopes to provide an improved functionality of querying by enabling users to fetch stock data by company name(s) alone. 
+Therefore, this package hopes to provide an improved functionality of querying by enabling users to fetch stock data by company name(s) alone. <br>
+Moreover, this package will generate stock information in dynamic formats in the form of visualizations, data table, stock price forecast, and an audio file with daily prime stock price.
 <br>
-The fetched data includes: <br>
+The fetched data table includes: <br>
 * _company name, open, high, low, close (closing price), adj close, volume, daily return, and PE ratios._ <br>
 <br>
-The stock information will be provided in dynamic formats with the use of visualizations, a data table, a stock forecast and an audio file.
+
 
 ## Installation
 
@@ -21,39 +23,50 @@ $ pip install stock_info_easy
 
 ## Usage
 
+#### 1. Fetch Stock Data
+Insert the name(s) of company(ies) inside the `get_hist_data` function. ex) ['amazon', 'apple', 'google', 'microsoft']
 ```python
-# Insert the name(s) of company(ies) inside the `get_hist_data` function.  ex) ['amazon', 'apple', 'google', 'microsoft']
->>> data_list, comp_names_abbr, company_list, comp_names = stock_info_easy.get_hist_data((['amazon', 'apple', 'google', 'microsoft']), start_date="01/04/2022", end_date = "2022-01-10") # if don't specify the `end_date`, today's date will be selected by default. 
+
+>>> data_list, comp_names_abbr, company_list, comp_names = stock_info_easy.get_hist_data((['amazon', 'apple', 'google', 'microsoft']), start_date="01/04/2022", end_date = "2022-01-10") 
+# if don't specify the `end_date`, today's date will be selected by default. 
 ```
 
 ```python
-# To view the stock data as a table, type `data_list` to view all or by company `company_list[i]`, i = index of the company. 
+
+# To view the stock data as a table, 
+# Type `data_list` to view all or by company `company_list[i]`, i = index of the company. 
+
 >>> company_list[1]  # stock info of all queried companies.
 ```
+
 <p align="center">
 <img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/data_list.png" width="900" height="400"/>
 </p>
 <br>
+
 ```python
+
 >>> company_list[0]  # first company (amazon) info.
 ```
 <p align="center">
 <img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/company_list[0].png" width="900" height="400"/>
 </p>
 <br>
+
 ```python
+
 >>> company_list[1]  # second company (apple) info.
 ```
 <p align="center">
 <img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/company_list[1].png" width="900" height="400"/>
 </p>
 <br>
-
-
 ```
 
 #### 2. Visualization of Closing Price
+
 ```python
+
 # To generate a visualization of closing price, copy-paste below function as it is.
 >>> get_closing_price_viz(company_list, comp_names) 
 ```
@@ -63,7 +76,9 @@ $ pip install stock_info_easy
 <br>
 
 #### 3. Visualization of Daily Return
+
 ```python
+
 # To generate a visualization of Daily Return, copy-paste below function as it is.
 >>> get_daily_return_viz(company_list, company_names)
 ```
@@ -75,7 +90,8 @@ $ pip install stock_info_easy
 This package provides key stock information such as PE ratio and basic company information of all queries companies in an audio format. 
 
 ```python
->>> generate_audio(comp_names_abbr, audio_filename='default1.mp3') # customize the audio filename; by default, the file will be saved as 'default1.mp3'.
+
+>>> generate_audio(comp_names_abbr, audio_filename='default1.mp3') # customize the audio filename
 ```
 <br>
 
