@@ -8,7 +8,7 @@ The currently available Yahoo finance API wrappers take __company symbols__ as i
 
 Therefore, this package aims to provide an improved functionality of querying by : 
 <p align="center"> <b> making it possible for users to fetch stock data by company name(s) alone! </b> <br><br> </p>
-Additionally, this package generates the stock data in dynamic formats, such as visualizations, data table, stock price forecast, and an audio file with daily prime stock price.
+Additionally, this package generates the stock data in dynamic formats, such as __visualizations, data table, stock price forecast, and an audio file with daily prime stock price.__
 <br>
 
 The fetched data table includes: <br>
