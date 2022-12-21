@@ -53,7 +53,7 @@ start_date="01/04/2022", end_date = "2022-01-10")
 
 ```python
 
-# first company info (amazon).
+# first company info. (amazon)
 >>> company_list[0]  
 ```
 <p align="center">
@@ -63,7 +63,7 @@ start_date="01/04/2022", end_date = "2022-01-10")
 
 ```python
 
-# second company info (apple).
+# second company info. (apple)
 >>> company_list[1]  
 ```
 <p align="center">
@@ -100,6 +100,7 @@ This package provides key stock information such as PE ratio and basic company i
 
 ```python
 
+# To genrate an audio file, copy-paste below function. 
 # Can customize the audio filename in the "audio_filename" parameter.
 >>> generate_audio(comp_names_abbr, audio_filename='default1.mp3') 
 ```
