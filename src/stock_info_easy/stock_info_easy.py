@@ -99,7 +99,7 @@ def get_hist_data(comp_names, start_date="01/04/2022", end_date=datetime.datetim
 
     Examples
     --------
-    >>> inputs: --comp_names amazon apple google microsoft --start_date 2022-01-04 --end_date 2022-12-08
+    >>> inputs: data_list, comp_names_abbr, company_list, comp_names = stock_info_easy.get_hist_data((['amazon', 'apple', 'google', 'microsoft']), start_date="01/04/2022", end_date = "2022-01-10") 
     >>> outputs: 
    # data_list:
                 Open        High         Low       Close   Adj Close    Volume company_name company_fullname
