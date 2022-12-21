@@ -119,10 +119,10 @@ windown_size=30, predict_window_size=10, predict=True)
 
 ```
 <p align="center">
-<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/predict_amazon.png", width="670" height="320" />
-<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/predict_apple.png", width="670" height="320" />
-<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/predict_google.png", width="670" height="320" />
-<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/predict_microsoft.png", width="670" height="320" />
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/predict_amazon.png", width="650" height="300" />
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/predict_apple.png", width="650" height="300" />
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/predict_google.png", width="650" height="300" />
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/predict_microsoft.png", width="650" height="300" />
 </p>
 <br>
 
