@@ -29,6 +29,66 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
+# def bool_flag(s): 
+#     """
+#     Parse boolean arguments from the command line.
+
+#     Parameters
+#     ----------
+#     s : bool
+#         Type true/false, on/off,  0/1
+
+#     Return 
+#     -------
+#     True or False 
+    
+#     Examples
+#     --------
+#     >>> bool_flag('true')
+#     True
+#     """
+#     FALSY_STRINGS = {"off", "false", "0"}
+#     TRUTHY_STRINGS = {"on", "true", "1"}
+#     if s.lower() in FALSY_STRINGS:
+#         return False
+#     elif s.lower() in TRUTHY_STRINGS:
+#         return True
+#     else:
+#         raise argparse.ArgumentTypeError("invalid value for a boolean flag")
+
+
+# def get_args():
+#     """
+#     ArgumentParser provides a convenient interface to handle command-line arguments. 
+#     When a user defines what arguments it requires, and argparse will figure out how to parse those.
+#     https://docs.python.org/3/library/argparse.html
+
+#     Return
+#     -------
+#     args: argparse object with parameters    
+    
+#     """
+#     parser = argparse.ArgumentParser(description='StockInfoEasy')
+#     parser.add_argument('--comp_names', type=str, nargs='+', default=('amazon', 'apple', 'google', 'microsoft'),
+#         help="""list of company names""")
+#     parser.add_argument('--start_date', type=str, default="01/04/2022", 
+#                         help='Start date for the model training. Default is the first working date of 2022 for the stock market(01/04/2022).')
+#     parser.add_argument('--end_date', type=str, 
+#                         default=datetime.datetime.strftime(datetime.datetime.today(), format='%Y-%m-%d'), 
+#                         help="End date for the model training. Today's date is used as a default. ")
+#     parser.add_argument('--window_size', type=int, default=30,
+#                         help='window_size to prepare features for stock prediction. ')
+#     parser.add_argument('--prediction_window_size', type=int, default=20,
+#                     help='window_size for stock price predicition in the future.')                    
+#     parser.add_argument('--predict_future_price', default=True, type=bool_flag,
+#         help="Adding this argument will predict the future price(s) of the interested company(ies).") 
+#     parser.add_argument('--audio_filename', type=str, default='test_stock1.mp3',
+#                         help='Define an audio filename with an extension .mp3')
+        
+#     args, unknown = parser.parse_known_args()
+#     return args
+
+
 def get_symbol(query):
     """
     THe stock data will be fetched from the existing Yahoo Finance API Wraper. As this wraper fetches finance data with companys' symbols, 
@@ -505,4 +565,22 @@ def generate_audio(comp_names_abbr, audio_filename='default1.mp3'):
 
     tts.save(audio_filename)
     playsound(audio_filename)
+
+
+# if __name__ == "__main__":
+#     args = get_args()
+#     data_list, comp_names_abbr, company_list, comp_names = get_hist_data(args.comp_names, start_date=args.start_date, end_date=args.end_date)
+    
+
+#     print("Company Name: ", comp_names_abbr)
+#     #print(data_list.groupby('company_fullname').head(1))
+#     print(data_list.groupby('company_fullname').tail(1))
+#     print(company_list)
+#     get_closing_price_viz(company_list, comp_names)
+#     get_daily_return_viz(company_list, comp_names)
+#     predict_future_price(data_list,  windown_size=args.window_size, 
+#                         predict_window_size=args.prediction_window_size, 
+#                         predict = args.predict_future_price)
+#     generate_audio(comp_names_abbr, audio_filename=args.audio_filename)
+#     sys.exit()
 
