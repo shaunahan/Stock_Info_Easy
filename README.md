@@ -3,7 +3,7 @@
 This Python package is an implementation of the existing  _yfinance wrapper_, one of the  widely used yahoo finance API wrappers.<br>
 
 
-The currently available Yahoo finance API wrappers take __company symbols__ as input queries instead of company names, and this often causes confusion as it is difficult to guess company symbols by heart. <br>
+The currently available Yahoo finance API wrappers take __company symbols__ as input queries instead of company names, and this often causes confusion as it is difficult to guess company symbols by heart and search the stock price of the interested companies. <br>
 (eg. what is the abbreviation form of the company _Apple, is it `APPL`? `AAPL`? or `APLE`?  (ans: the company symobol of apple is AAPL)_  
 
 Therefore, this package aims to provide an improved functionality of querying by making it possible for users to fetch stock data by __company name(s) alone!__ <br><br>
