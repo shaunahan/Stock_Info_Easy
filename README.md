@@ -48,7 +48,7 @@ start_date="01/04/2022", end_date = "2022-01-10")
 ```
 
 <p align="center">
-<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/data_list.png" width="750" height="360"/>
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/data_list.png" width="700" height="320"/>
 </p>
 <br>
 
@@ -58,7 +58,7 @@ start_date="01/04/2022", end_date = "2022-01-10")
 >>> company_list[0]  
 ```
 <p align="center">
-<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/company_list[0].png" width="750" height="360"/>
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/company_list[0].png" width="700" height="320"/>
 </p>
 <br>
 
@@ -68,7 +68,7 @@ start_date="01/04/2022", end_date = "2022-01-10")
 >>> company_list[1]  
 ```
 <p align="center">
-<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/company_list[1].png" width="750" height="360"/>
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/company_list[1].png" width="700" height="320"/>
 </p>
 <br>
 
@@ -101,7 +101,7 @@ This package provides key stock information such as PE ratio and basic company i
 
 ```python
 
-# customize the audio filename in the "audio_filename" parameter.
+# Can customize the audio filename in the "audio_filename" parameter.
 >>> generate_audio(comp_names_abbr, audio_filename='default1.mp3') 
 ```
 <br>
@@ -111,7 +111,7 @@ This package uses the time series LSTM vanila model to predict the closing price
 LSTM model is built with two hidden LSTM layers followed by a standard feedforward output layer. 
 
 ```python
-# Write following functions.
+# Copy-paste the below function.
 # The window size and prediction window size can be customized. 
 
 >>> stock_info_easy.predict_future_price(data_list, comp_names_abbr, \
@@ -119,10 +119,10 @@ windown_size=30, predict_window_size=10, predict=True)
 
 ```
 <p align="center">
-<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/predict_amazon.png", width="700" height="350" />
-<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/predict_apple.png", width="700" height="350" />
-<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/predict_google.png", width="700" height="350" />
-<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/predict_microsoft.png", width="700" height="350" />
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/predict_amazon.png", width="670" height="320" />
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/predict_apple.png", width="670" height="320" />
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/predict_google.png", width="670" height="320" />
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/predict_microsoft.png", width="670" height="320" />
 </p>
 <br>
 
