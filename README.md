@@ -30,7 +30,7 @@ Insert the name of a company inside the `get_hist_data` function. <Br>
 _ex) ['amazon', 'apple', 'google', 'microsoft']_
 ```python
 
-# if not specifying the "end_date", today's date will be selected by default. 
+# By default, today's date will be used as end_date when the end_date is not specified. 
 
 >>> data_list, comp_names_abbr, company_list, comp_names = \
 stock_info_easy.get_hist_data((['amazon', 'apple', 'google', 'microsoft']), \
@@ -48,7 +48,7 @@ start_date="01/04/2022", end_date = "2022-01-10")
 ```
 
 <p align="center">
-<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/data_list.png" width="700" height="300"/>
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/data_list.png" width="800" height="400"/>
 </p>
 <br>
 
@@ -58,7 +58,7 @@ start_date="01/04/2022", end_date = "2022-01-10")
 >>> company_list[0]  
 ```
 <p align="center">
-<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/company_list[0].png" width="700" height="300"/>
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/company_list[0].png" width="800" height="400"/>
 </p>
 <br>
 
@@ -68,7 +68,7 @@ start_date="01/04/2022", end_date = "2022-01-10")
 >>> company_list[1]  
 ```
 <p align="center">
-<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/company_list[1].png" width="700" height="300"/>
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/company_list[1].png" width="800" height="400"/>
 </p>
 <br>
 
@@ -119,10 +119,10 @@ windown_size=30, predict_window_size=10, predict=True)
 
 ```
 <p align="center">
-<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/predict_amazon.png", width="500" height="200" />
-<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/predict_apple.png", width="500" height="200" />
-<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/predict_google.png", width="500" height="200" />
-<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/predict_microsoft.png", width="500" height="200" />
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/predict_amazon.png", width="800" height="400" />
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/predict_apple.png", width="800" height="400" />
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/predict_google.png", width="800" height="400" />
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/predict_microsoft.png", width="800" height="400" />
 </p>
 <br>
 
