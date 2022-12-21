@@ -1,5 +1,5 @@
 # Stock_Info_Easy
-
+<Br>
 This Python package is an implementation of the existing  _yfinance wrapper_, one of the  widely used yahoo finance API wrappers.<br>
 <br>
 Most of the times, the currently available Yahoo finance API wrappers take __company symbols__ as input queries instead of company names. 
@@ -8,7 +8,7 @@ This often causes confusion as it is difficult to guess company symbols by heart
 <br>
 Therefore, this package aims to provide an improved functionality of querying by making it possible for users to fetch stock data by __company name(s) alone__. <br><br>
 Moreover, this package will generate stock information in dynamic formats in the form of visualizations, data table, stock price forecast, and an audio file with daily prime stock price.
-<br>
+<br><Br>
 The fetched data table includes: <br>
 * _company name, open, high, low, close (closing price), adj close, volume, daily return, and PE ratios._ <br>
 <br>
@@ -30,7 +30,8 @@ ex) ['amazon', 'apple', 'google', 'microsoft']
 
 # if not specifying the "end_date", today's date will be selected by default. 
 >>> data_list, comp_names_abbr, company_list, comp_names = \
-stock_info_easy.get_hist_data((['amazon', 'apple', 'google', 'microsoft']), start_date="01/04/2022", end_date = "2022-01-10") 
+stock_info_easy.get_hist_data((['amazon', 'apple', 'google', 'microsoft']), \
+start_date="01/04/2022", end_date = "2022-01-10") 
 
 ```
 
@@ -40,31 +41,34 @@ stock_info_easy.get_hist_data((['amazon', 'apple', 'google', 'microsoft']), star
 # Type "data_list" (to view all) or "company_list[i]", i = index of the company (to view by company). 
 
 # stock info of all queried companies.
+
 >>> data_list 
 ```
 
 <p align="center">
-<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/data_list.png" width="900" height="400"/>
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/data_list.png" width="700" height="300"/>
 </p>
 <br>
 
 ```python
 
 # first company info (amazon).
+
 >>> company_list[0]  
 ```
 <p align="center">
-<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/company_list[0].png" width="900" height="400"/>
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/company_list[0].png" width="700" height="300"/>
 </p>
 <br>
 
 ```python
 
 # second company info (apple).
+
 >>> company_list[1]  
 ```
 <p align="center">
-<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/company_list[1].png" width="900" height="400"/>
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/company_list[1].png" width="700" height="300"/>
 </p>
 <br>
 ```
@@ -74,6 +78,7 @@ stock_info_easy.get_hist_data((['amazon', 'apple', 'google', 'microsoft']), star
 ```python
 
 # To generate a visualization of closing price, copy-paste below function as it is.
+
 >>> get_closing_price_viz(company_list, comp_names) 
 ```
 <p align="center">
@@ -86,18 +91,20 @@ stock_info_easy.get_hist_data((['amazon', 'apple', 'google', 'microsoft']), star
 ```python
 
 # To generate a visualization of Daily Return, copy-paste below function as it is.
+
 >>> get_daily_return_viz(company_list, company_names)
 ```
 <p align="center">
 <img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/daily_return_.png" width="750" height="430" />
 </p>
 
-### 4. Audio file on Stock Info
+### 4. Prime Stock Info on Audio
 This package provides key stock information such as PE ratio and basic company information of all queries companies in an audio format. 
 
 ```python
 
 # customize the audio filename in the "audio_filename" parameter.
+
 >>> generate_audio(comp_names_abbr, audio_filename='default1.mp3') 
 ```
 <br>
@@ -110,7 +117,8 @@ LSTM model is built with two hidden LSTM layers followed by a standard feedforwa
 # Write following functions.
 # The window size and prediction window size can be customized. 
 
->>> stock_info_easy.predict_future_price(data_list, comp_names_abbr, windown_size=30, predict_window_size=10, predict=True)
+>>> stock_info_easy.predict_future_price(data_list, comp_names_abbr, \
+windown_size=30, predict_window_size=10, predict=True)
 
 ```
 <p align="center">
