@@ -1,9 +1,7 @@
 """
 Python package that allows users to get stock information easily simply by inserting the names of their interested companies. 
 This module uses the yfinance wraper, an already existing Yahoo Finance API wraper to fetch the stock data.
-In the previous API wraper, it is difficult to fetch finance data by company names as their stock data are available via companys' abbreviated symbols. 
-This package aims to proivde prime stock information in a user-friendly way: by simply adding company names. 
-Interactive visuals and audio files will be generated to help non-finance people understand the key numerical stock values.
+This package aims to implement the inconvenient way of querying stock data of compnaies. 
 """
 import yfinance as yf  
 import yahoo_fin.stock_info as si 
@@ -31,7 +29,6 @@ warnings.filterwarnings("ignore")
 
 def get_symbol(query):
     """
-    THe stock data will be fetched from the existing Yahoo Finance API Wraper. As this wraper fetches finance data with companys' symbols, 
     This function converts the company name that user's inserted into its abbreviated symbol.
     The converted symbol will then be used to fetch finance info from the API wraper. 
     
@@ -72,7 +69,7 @@ def get_symbol(query):
 def get_hist_data(comp_names, start_date="01/04/2022", end_date=datetime.datetime.strftime( datetime.datetime.today(), format='%Y-%m-%d'), interval="1d"): 
     """
     Get historical stock data for the customized time frame.
-    Data to be fetched are Open, High, Low, Close, Adj Close, Volume, Company Name, and Company Full Name. 
+    Fetched info constains Open, High, Low, Close, Adj Close, Volume, Company Name, and Company Full Name. 
     - High, Low: refer to the maximum and minimum prices in a given time period.
     - Open: refers to the price at which a stock started trading when the opening bell rang.
     - Close: refers to the price of an individual stock when the stock exchange closed shop for the day.
@@ -260,8 +257,7 @@ def get_daily_return_viz(company_list, company_names):
 
 def create_pricelist(close_prices, windown_size = 30): 
     """
-    This function extracts historical stock data for the queried time interval, and 
-    calculates *returns* (ratio of current price with respect to initial price) from the closing price. 
+    This function calculates returns (ratio of current price with respect to initial price) from the closing price. 
     This function pre-processes data for the prediction function.
     
     Parameters
@@ -338,7 +334,7 @@ def predict_future_price(data_list, comp_names_abbr, windown_size=30, predict_wi
 
 def predict_rolling_price(result_list, model, window_size = 30, predict_window_size = 10):
     """
-    Predict future stock price in a rolling basis. 
+    Predict future stock price on a rolling basis. 
 
     Parameters
     ----------
@@ -375,7 +371,7 @@ def predict_rolling_price(result_list, model, window_size = 30, predict_window_s
 
 def train_model(stock, comp_name, windown_size=30, predict_window_size=10):
     """
-    Build a time series LSTM Model
+    Build a time series LSTM Model.
 
     Parameters
     ----------
