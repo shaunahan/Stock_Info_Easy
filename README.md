@@ -41,7 +41,7 @@ start_date="01/04/2022", end_date = "2022-01-10")
 ```python
 
 # To view the stock data as a table, 
-# Type "data_list" (to view all) or "company_list[i]", i = index of the company (to view by company). 
+# Type "data_list" (to view all) or "company_list[i]", i = index of the company. 
 
 # stock info of all queried companies.
 >>> data_list 
