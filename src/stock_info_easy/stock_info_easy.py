@@ -186,7 +186,7 @@ def get_hist_data(comp_names, start_date="01/04/2022", end_date=datetime.datetim
         
         # a method to get historical price data from the yahoo finance library from Yahoo Finance Wraper. It takes company symbols as input. 
         hist_data = get_data(comp, start_date=start_date, end_date=end_date,  interval=interval, index_as_date = True) 
-        hist_data['company_fullname'] = comp_full.upper() #### adding a new column called "company fullname"?
+        hist_data['company_fullname'] = comp_full.upper() 
         data_list.append(hist_data)
 
     data_list = pd.concat(data_list, axis=0)
