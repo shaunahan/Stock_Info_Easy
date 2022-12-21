@@ -48,7 +48,7 @@ start_date="01/04/2022", end_date = "2022-01-10")
 ```
 
 <p align="center">
-<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/data_list.png" width="700" height="320"/>
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/data_list.png" width="730" height="350"/>
 </p>
 <br>
 
@@ -58,7 +58,7 @@ start_date="01/04/2022", end_date = "2022-01-10")
 >>> company_list[0]  
 ```
 <p align="center">
-<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/company_list[0].png" width="700" height="320"/>
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/company_list[0].png" width="730" height="350"/>
 </p>
 <br>
 
@@ -68,7 +68,7 @@ start_date="01/04/2022", end_date = "2022-01-10")
 >>> company_list[1]  
 ```
 <p align="center">
-<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/company_list[1].png" width="700" height="320"/>
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/company_list[1].png" width="730" height="350"/>
 </p>
 <br>
 
@@ -81,7 +81,7 @@ start_date="01/04/2022", end_date = "2022-01-10")
 >>> get_closing_price_viz(company_list, comp_names) 
 ```
 <p align="center">
-<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/closing_price_.png" width="900" height="400"/>
+<img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/closing_price_.png" width="1000" height="450"/>
 </p>
 <br>
 
