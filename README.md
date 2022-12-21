@@ -4,9 +4,9 @@ This Python package is an implementation of the existing  _yfinance wrapper_, on
 <br>
 Most of the times, the currently available Yahoo finance API wrappers take __company symbols__ as input queries instead of company names. 
 This often causes confusion as it is difficult to guess company symbols by heart. <br>
-(eg. what is the abbreviation form of the company _Apple_ - is it _APPL?_ _AAPL?_ or _APLE?)_  <br>
+(eg. what is the abbreviation form of the company _Apple - is it _APPL?_ _AAPL?_ or _APLE?)_  <br>
 <br>
-Therefore, this package aims to provide an improved functionality of querying by making it possible for users to fetch stock data by __company name(s) alone__. <br>
+Therefore, this package aims to provide an improved functionality of querying by making it possible for users to fetch stock data by __company name(s) alone__. <br><br>
 Moreover, this package will generate stock information in dynamic formats in the form of visualizations, data table, stock price forecast, and an audio file with daily prime stock price.
 <br>
 The fetched data table includes: <br>
@@ -23,8 +23,8 @@ $ pip install stock_info_easy
 
 ## Usage
 
-#### 1. Fetch Stock Data
-Insert the name(s) of company(ies) inside the __get_hist_data__ function. <Br> 
+### 1. Fetch Stock Data
+Insert the name of a company inside the `get_hist_data` function. <Br> 
 ex) ['amazon', 'apple', 'google', 'microsoft']
 ```python
 
@@ -37,7 +37,7 @@ stock_info_easy.get_hist_data((['amazon', 'apple', 'google', 'microsoft']), star
 ```python
 
 # To view the stock data as a table, 
-# Type `data_list` to view all or by company `company_list[i]`, i = index of the company. 
+# Type "data_list" (to view all) or "company_list[i]", i = index of the company (to view by company). 
 
 # stock info of all queried companies.
 >>> data_list 
@@ -69,7 +69,7 @@ stock_info_easy.get_hist_data((['amazon', 'apple', 'google', 'microsoft']), star
 <br>
 ```
 
-#### 2. Visualization of Closing Price
+### 2. Visualization of Closing Price
 
 ```python
 
@@ -81,7 +81,7 @@ stock_info_easy.get_hist_data((['amazon', 'apple', 'google', 'microsoft']), star
 </p>
 <br>
 
-#### 3. Visualization of Daily Return
+### 3. Visualization of Daily Return
 
 ```python
 
@@ -92,7 +92,7 @@ stock_info_easy.get_hist_data((['amazon', 'apple', 'google', 'microsoft']), star
 <img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/daily_return_.png" width="750" height="430" />
 </p>
 
-#### 4. Audio file on Stock Info
+### 4. Audio file on Stock Info
 This package provides key stock information such as PE ratio and basic company information of all queries companies in an audio format. 
 
 ```python
@@ -102,7 +102,7 @@ This package provides key stock information such as PE ratio and basic company i
 ```
 <br>
 
-#### 5. Prediction on Closing Price
+### 5. Prediction on Closing Price
 This package uses the time series LSTM vanila model to predict the closing price. 
 LSTM model is built with two hidden LSTM layers followed by a standard feedforward output layer. 
 
