@@ -2,11 +2,11 @@
 
 This Python package is an implementation of the existing  _yfinance wrapper_, one of the  widely used yahoo finance API wrappers.<br>
 <br>
-Most of the times, the currently available Yahoo finance API wrappers take company symbols as input queries instead of company names. 
+Most of the times, the currently available Yahoo finance API wrappers take __company symbols__ as input queries instead of company names. 
 This often causes confusion as it is difficult to guess company symbols by heart. <br>
-(eg. what is the abbreviation form of the company `Apple` - is it APPL? AAPL? or APLE?)  <br>
+(eg. what is the abbreviation form of the company _Apple_ - is it _APPL?_ _AAPL?_ or _APLE?)_  <br>
 <br>
-Therefore, this package hopes to provide an improved functionality of querying by enabling users to fetch stock data by company name(s) alone. <br>
+Therefore, this package aims to provide an improved functionality of querying by making it possible for users to fetch stock data by __company name(s) alone__. <br>
 Moreover, this package will generate stock information in dynamic formats in the form of visualizations, data table, stock price forecast, and an audio file with daily prime stock price.
 <br>
 The fetched data table includes: <br>
@@ -24,11 +24,14 @@ $ pip install stock_info_easy
 ## Usage
 
 #### 1. Fetch Stock Data
-Insert the name(s) of company(ies) inside the `get_hist_data` function. ex) ['amazon', 'apple', 'google', 'microsoft']
+Insert the name(s) of company(ies) inside the __get_hist_data__ function. <Br> 
+ex) ['amazon', 'apple', 'google', 'microsoft']
 ```python
 
->>> data_list, comp_names_abbr, company_list, comp_names = stock_info_easy.get_hist_data((['amazon', 'apple', 'google', 'microsoft']), start_date="01/04/2022", end_date = "2022-01-10") 
-# if don't specify the `end_date`, today's date will be selected by default. 
+# if not specifying the "end_date", today's date will be selected by default. 
+>>> data_list, comp_names_abbr, company_list, comp_names = \
+stock_info_easy.get_hist_data((['amazon', 'apple', 'google', 'microsoft']), start_date="01/04/2022", end_date = "2022-01-10") 
+
 ```
 
 ```python
@@ -36,7 +39,8 @@ Insert the name(s) of company(ies) inside the `get_hist_data` function. ex) ['am
 # To view the stock data as a table, 
 # Type `data_list` to view all or by company `company_list[i]`, i = index of the company. 
 
->>> company_list[1]  # stock info of all queried companies.
+# stock info of all queried companies.
+>>> data_list 
 ```
 
 <p align="center">
@@ -46,7 +50,8 @@ Insert the name(s) of company(ies) inside the `get_hist_data` function. ex) ['am
 
 ```python
 
->>> company_list[0]  # first company (amazon) info.
+# first company info (amazon).
+>>> company_list[0]  
 ```
 <p align="center">
 <img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/company_list[0].png" width="900" height="400"/>
@@ -55,7 +60,8 @@ Insert the name(s) of company(ies) inside the `get_hist_data` function. ex) ['am
 
 ```python
 
->>> company_list[1]  # second company (apple) info.
+# second company info (apple).
+>>> company_list[1]  
 ```
 <p align="center">
 <img src="https://github.com/shaunahan/Stock_Info_Easy/blob/main/img/company_list[1].png" width="900" height="400"/>
@@ -91,7 +97,8 @@ This package provides key stock information such as PE ratio and basic company i
 
 ```python
 
->>> generate_audio(comp_names_abbr, audio_filename='default1.mp3') # customize the audio filename
+# customize the audio filename in the "audio_filename" parameter.
+>>> generate_audio(comp_names_abbr, audio_filename='default1.mp3') 
 ```
 <br>
 
@@ -101,7 +108,7 @@ LSTM model is built with two hidden LSTM layers followed by a standard feedforwa
 
 ```python
 # Write following functions.
-# The window size and prediction window size can be customized; by default, they are set as 30 days and 10 days respectively. 
+# The window size and prediction window size can be customized. 
 
 >>> stock_info_easy.predict_future_price(data_list, comp_names_abbr, windown_size=30, predict_window_size=10, predict=True)
 
