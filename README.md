@@ -1,14 +1,17 @@
 # Stock_Info_Easy
-<Br>
+
 This Python package is an implementation of the existing  _yfinance wrapper_, one of the  widely used yahoo finance API wrappers.<br>
-<br>
+
+
 Most of the times, the currently available Yahoo finance API wrappers take __company symbols__ as input queries instead of company names. 
 This often causes confusion as it is difficult to guess company symbols by heart. <br>
-(eg. what is the abbreviation form of the company _Apple - is it _APPL?_ _AAPL?_ or _APLE?)_  <br>
+(eg. what is the abbreviation form of the company _Apple - is it _APPL?_ _AAPL?_ or _APLE?)_  
+<br>
 <br>
 Therefore, this package aims to provide an improved functionality of querying by making it possible for users to fetch stock data by __company name(s) alone__. <br><br>
 Moreover, this package will generate stock information in dynamic formats in the form of visualizations, data table, stock price forecast, and an audio file with daily prime stock price.
-<br><Br>
+<br>
+
 The fetched data table includes: <br>
 * _company name, open, high, low, close (closing price), adj close, volume, daily return, and PE ratios._ <br>
 <br>
@@ -41,7 +44,6 @@ start_date="01/04/2022", end_date = "2022-01-10")
 # Type "data_list" (to view all) or "company_list[i]", i = index of the company (to view by company). 
 
 # stock info of all queried companies.
-
 >>> data_list 
 ```
 
@@ -53,7 +55,6 @@ start_date="01/04/2022", end_date = "2022-01-10")
 ```python
 
 # first company info (amazon).
-
 >>> company_list[0]  
 ```
 <p align="center">
@@ -64,7 +65,6 @@ start_date="01/04/2022", end_date = "2022-01-10")
 ```python
 
 # second company info (apple).
-
 >>> company_list[1]  
 ```
 <p align="center">
@@ -78,7 +78,6 @@ start_date="01/04/2022", end_date = "2022-01-10")
 ```python
 
 # To generate a visualization of closing price, copy-paste below function as it is.
-
 >>> get_closing_price_viz(company_list, comp_names) 
 ```
 <p align="center">
@@ -91,7 +90,6 @@ start_date="01/04/2022", end_date = "2022-01-10")
 ```python
 
 # To generate a visualization of Daily Return, copy-paste below function as it is.
-
 >>> get_daily_return_viz(company_list, company_names)
 ```
 <p align="center">
@@ -104,7 +102,6 @@ This package provides key stock information such as PE ratio and basic company i
 ```python
 
 # customize the audio filename in the "audio_filename" parameter.
-
 >>> generate_audio(comp_names_abbr, audio_filename='default1.mp3') 
 ```
 <br>
