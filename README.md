@@ -7,8 +7,8 @@ Most of the times, the currently available Yahoo finance API wrappers take __com
 This often causes confusion as it is difficult to guess company symbols by heart. <br>
 (eg. what is the abbreviation form of the company _Apple, is it `APPL`? `AAPL`? or `APLE`?)_  
 
-Therefore, this package aims to provide an improved functionality of querying by making it possible for users to fetch stock data by __company name(s) alone__. <br><br>
-Moreover, this package will generate stock information in dynamic formats in the form of visualizations, data table, stock price forecast, and an audio file with daily prime stock price.
+Therefore, this package aims to provide an improved functionality of querying by making it possible for users to fetch stock data by __company name(s) alone!__. <br><br>
+Additionally, this package generates the stock data in dynamic formats, such as visualizations, data table, stock price forecast, and an audio file with daily prime stock price.
 <br>
 
 The fetched data table includes: <br>
@@ -77,7 +77,7 @@ start_date="01/04/2022", end_date = "2022-01-10")
 
 ```python
 
-# To generate a visualization of closing price, copy-paste below function as it is.
+# To generate the visualization of Closing Price, copy-paste below function as it is.
 >>> get_closing_price_viz(company_list, comp_names) 
 ```
 <p align="center">
@@ -89,7 +89,7 @@ start_date="01/04/2022", end_date = "2022-01-10")
 
 ```python
 
-# To generate a visualization of Daily Return, copy-paste below function as it is.
+# To generate the visualization of Daily Return, copy-paste below function as it is.
 >>> get_daily_return_viz(company_list, company_names)
 ```
 <p align="center">
