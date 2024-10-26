@@ -16,8 +16,16 @@ To address this challenge, this package simplifies stock data retrieval by enabl
 - **Dynamic Data Output**: The package generates stock data in multiple formats, including:
   - Visualizations of stock trends.
   - A comprehensive data table with key financial metrics.
-  - Stock price forecasts.
+  - **Stock Price Forecasts** using a Time Series LSTM Model.
   - An audio summary file containing daily key stock information.
+
+## Machine Learning Model
+
+This package leverages a **Long Short-Term Memory (LSTM) Model**, a type of recurrent neural network commonly used for time series predictions, to forecast future stock prices. The model is trained on historical stock data to predict trends. Key parameters of the model include:
+
+- **Sliding Window Size**: Determines the historical data window used for training.
+- **Prediction Window Size**: Specifies how many days ahead to predict.
+- The ML model generates a visualization comparing predicted stock prices with actual historical prices.
 
 ## Data Table Details
 
@@ -33,4 +41,18 @@ The fetched data includes:
 - **Daily Return** (Percentage Change)
 - **PE Ratios** (Price-to-Earnings Ratios)
 
-This package is designed to make financial data more accessible, intuitive, and dynamic for users.
+## Audio Summary
+
+An audio file is generated using Text-to-Speech (TTS) technology, providing a daily update on key stock information. The summary includes:
+
+- **Company's Full Name**
+- **PE Ratio**
+- **Sector and Industry**
+- **Daily Stock Price Information**
+
+## Installation
+
+To install the package, use the following command:
+
+```bash
+pip install stock-info-easy
